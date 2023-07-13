@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Label</title>
+
+    <style>
+        #player{
+            color: white;
+            background-color: rgb(62, 0, 128);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 8px;
+            cursor: default;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="player">Player: (Click Here)</div>
+
+    <script>
+        let player= document.getElementById("player");
+
+        player.addEventListener("click", updatename);
+
+        function updatename(){
+            let name = prompt("Enter your name:", "Player_1");
+            player.textContent = `Player Name: ${name}`;
+        }
+    </script>
+</body>
+</html>
